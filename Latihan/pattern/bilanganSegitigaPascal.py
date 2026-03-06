@@ -1,4 +1,4 @@
-jumlah_baris = 15
+jumlah_baris = 20
 def pascal_pattern(row):
     list_bilangan_segitiga_pascal = [[0,1,0]]
     for i in range(0, row - 1):
@@ -14,16 +14,16 @@ def pascal_pattern(row):
 
 
 pascal = pascal_pattern(jumlah_baris)
-space = jumlah_baris
+space = ""
+jumlah_baris_space = jumlah_baris
 for i in range(0, len(pascal)):
     text = " "
     text_each_row = []
     for j in pascal[i]:
         if j != 0:
             text_each_row.append(str(j))
-    print(text.join(text_each_row).rjust(space))
-    for l in range(0, space):
-        # 
-        if l % 5 == 0:
-            space += 1
-    # print(space)
+    for l in range((jumlah_baris_space - 1), -1 , -1):
+        space += " "
+    print(space + text.join(text_each_row))
+    jumlah_baris_space -= 1
+    space = ""
