@@ -1,4 +1,4 @@
-jumlah_suku = 10
+jumlah_suku = 100
 
 bilangan_fibonacci = [0,1,1]
 
